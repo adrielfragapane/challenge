@@ -6,7 +6,7 @@ Aplicación API realizada con Spring Boot y persistencia en base de datos MySQL.
 
 Generar archivo .jar de aplicación Spring Boot (ignorando los tests debido a la existencia del caso de prueba no exitoso).
 
-````
+```
 cd challenge 
 docker
 mvn package -Dmaven.test.skip=true
