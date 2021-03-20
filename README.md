@@ -7,8 +7,10 @@ Aplicación API realizada con Spring Boot y persistencia en base de datos MySQL.
 Generar archivo .jar de aplicación Spring Boot (ignorando los tests debido a la existencia del caso de prueba no exitoso).
 
 ```
-cd challenge 
+cd challenge
+
 docker
+
 mvn package -Dmaven.test.skip=true
 ```
 
@@ -31,11 +33,15 @@ API con operaciones CRUD (GET - POST) y consulta por sucursal más cercana a un 
 
 Request:
 
+```
 GET -  http://localhost:8085/sucursales
+```
 
 Ejemplo:
 
+```
 GET -  http://localhost:8085/sucursales
+```
 
 Respuesta:
 
@@ -65,11 +71,15 @@ Respuesta:
 
 Request:
 
+```
 GET -  http://localhost:8085/sucursales/{id}
+```
 
 Ejemplo:
 
+```
 GET -  http://localhost:8085/sucursales/2
+```
 
 Respuesta:
 
@@ -86,11 +96,15 @@ Respuesta:
 
 Request:
 
+```
 POST -  http://localhost:8085/sucursales
+```
 
 Ejemplo:
 
+```
 POST -  http://localhost:8085/sucursales
+```
 
 Body:
 
@@ -120,11 +134,15 @@ El cálculo de la sucursal más cercana se realiza geométricamente, y no geogr�
 
 Request:
 
+```
 GET -  http://localhost:8085/sucursales/miSucursal?latitud={latitud}&longitud={longitud}
+```
 
 Ejemplo:
 
+```
 GET -  http://localhost:8085/sucursales/miSucursal?latitud=-66.9863759&longitud=-80.9683574
+```
 
 Respuesta:
 
