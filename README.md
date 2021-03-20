@@ -29,18 +29,18 @@ docker-compose up
 
 API con operaciones CRUD (GET - POST) y consulta por sucursal más cercana a un punto dado.
 
-## Obtener todas las sucursales existentes
+### Obtener todas las sucursales existentes
 
 Request:
 
 ```
-GET -  http://localhost:8085/sucursales
+GET  -  http://localhost:8085/sucursales
 ```
 
 Ejemplo:
 
 ```
-GET -  http://localhost:8085/sucursales
+GET  -  http://localhost:8085/sucursales
 ```
 
 Respuesta:
@@ -67,18 +67,18 @@ Respuesta:
     }
 ]
 ```
-## Obtener una sucursal por id
+### Obtener una sucursal por id
 
 Request:
 
 ```
-GET -  http://localhost:8085/sucursales/{id}
+GET  -  http://localhost:8085/sucursales/{id}
 ```
 
 Ejemplo:
 
 ```
-GET -  http://localhost:8085/sucursales/2
+GET  -  http://localhost:8085/sucursales/2
 ```
 
 Respuesta:
@@ -92,18 +92,18 @@ Respuesta:
 }
 ```
 
-## Crear una nueva sucursal
+### Crear una nueva sucursal
 
 Request:
 
 ```
-POST -  http://localhost:8085/sucursales
+POST  -  http://localhost:8085/sucursales
 ```
 
 Ejemplo:
 
 ```
-POST -  http://localhost:8085/sucursales
+POST  -  http://localhost:8085/sucursales
 ```
 
 Body:
@@ -128,20 +128,20 @@ Respuesta:
 ```
 
 
-## Obtener la sucursal más cercana geográficamente
+### Obtener la sucursal más cercana geográficamente
 
 El cálculo de la sucursal más cercana se realiza geométricamente, y no geográficamente, utilizando la latitud y longitud provistas.
 
 Request:
 
 ```
-GET -  http://localhost:8085/sucursales/miSucursal?latitud={latitud}&longitud={longitud}
+GET  -  http://localhost:8085/sucursales/miSucursal?latitud={latitud}&longitud={longitud}
 ```
 
 Ejemplo:
 
 ```
-GET -  http://localhost:8085/sucursales/miSucursal?latitud=-66.9863759&longitud=-80.9683574
+GET  -  http://localhost:8085/sucursales/miSucursal?latitud=-66.9863759&longitud=-80.9683574
 ```
 
 Respuesta:
@@ -152,6 +152,6 @@ Respuesta:
     "direccion": "Dirección 2",
     "latitud": -85.4856321,
     "longitud": -100.6847859
-    }
+}
 ```
 
