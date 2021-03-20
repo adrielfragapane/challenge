@@ -9,8 +9,6 @@ Generar archivo .jar de aplicación Spring Boot (ignorando los tests debido a la
 ```
 cd challenge
 
-docker
-
 mvn package -Dmaven.test.skip=true
 ```
 
