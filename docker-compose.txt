@@ -1,0 +1,29 @@
+version: "2"
+
+services:
+  mysql-standalone:
+    #image: microsoft/mssql-server-windows-express:latest
+    image: mysql/mysql-server:latest
+    environment:
+      #- SA_PASSWORD=Password123
+      #- ACCEPT_EULA=Y
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: TEST
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"    
+  web:
+    image: challenge
+    depends_on:
+      - mysql-standalone
+    ports:
+      - "8085:8085"
+    environment:
+      DATABASE_HOST: mysql-standalone
+      DATABASE_USER: user
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: TEST
+      DATABASE_PORT: 3306
+
+    

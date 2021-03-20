@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+
+  mysql:
+    image: mysql/mysql-server:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=TEST
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - 3306:3306
+
+  app:
+    image: challenge
+    restart: on-failure
+    depends_on:
+      - mysql
+    ports:
+      - 8085:8085
+    environment:
+      - DATABASE_HOST=mysql
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=TEST
+      - DATABASE_PORT=3306
