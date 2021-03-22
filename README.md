@@ -1,6 +1,6 @@
 # Frávega IT - Sucursal CRUD
 
-Aplicación API realizada con Spring Boot y persistencia en base de datos MySQL.
+Aplicación API realizada con Spring Boot (Java 8) y persistencia en base de datos MySQL.
 
 ## Compilación
 
